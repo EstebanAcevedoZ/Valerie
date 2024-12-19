@@ -9779,7 +9779,16 @@ a.text-dark:hover, a.text-dark:focus {
 .fade-in {
   animation: fadeIn 3s ease; /* 2s is the duration */
 }
+html, body {
+  overflow-x: hidden;
+  outline: 1px solid red; /* Debug outline */
+}
+
+* {
+  outline: 1px solid rgba(255, 0, 0, 0.5); /* Debug all elements */
+}
 @keyframes fadeIn {
   0% {
       opacity: 0;
   }}
+
