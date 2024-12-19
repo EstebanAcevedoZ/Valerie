@@ -4,10 +4,9 @@
 <head>
     <meta charset="utf-8">
     <title>¡Estás invitado!</title> 
-    <link rel="icon" href="/img/logo.png" type="image/x-icon">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/logo.png" rel="icon" type="image/x-icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -65,7 +64,7 @@
                                 <h3 class="text-uppercase font-weight-normal text-white m-0 fade-in" style="letter-spacing: 1px;">Celebra conmigo mis 15 años</h3>
                             </div>
                             <h3 class="text-uppercase font-weight-normal text-white m-0 py-3 fade-in" style="letter-spacing: 1px;">8 de febrero</h3>
-                            <div class="countdown">
+                            <div class="countdown text-center font-awesome">
                                 <div class="fade-in">
                                     <p id="days">00</p>
                                     <span>Días</span>
@@ -76,11 +75,11 @@
                                 </div>
                                 <div class="fade-in">
                                     <p id="minutes">00</p>
-                                    <span>Minutos</span>
+                                    <span>Min.</span>
                                 </div>
                                 <div class="fade-in">
                                     <p id="seconds">00</p>
-                                    <span>Segundos</span>
+                                    <span>Seg.</span>
                                 </div>
                             </div>
                         </div>
@@ -100,8 +99,11 @@
                 <h1 class="font-secondary display-4">Estás invitado</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
-            <div class="col-md-6 text-center">
-                <h5 class="font-weight-normal text-muted mb-3 pb-3">Lorem elitr magna stet rebum dolores sed. Est stet labore est</h3>
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <h5 class="font-weight-normal text-muted mb-3 pb-3">Con gran alegría, queremos invitarte a celebrar los 15 años de Valeria Castiblanco. 
+                        Será una ocasión llena de amor, risas y momentos inolvidables, donde Valerie dará un paso importante en su camino de la vida.</h5>
+                </div>
             </div>
         </div>
     </div>
@@ -114,11 +116,54 @@
             <h1 class="font-secondary display-4">Mi galería de fotos</h1>
             <i class="far fa-heart text-dark"></i>
         </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                <h5 class="font-weight-normal text-muted mb-3 pb-3">¡Desliza la foto para ver más!</h5>
+            </div>
+        </div>
+        <div class="owl-carousel gallery-carousel">
+            <div class="gallery-item">
+                <img class="img-fluid w-100" src="img/gallery-7.jpg" alt="">
+                <a href="img/gallery-7.jpg" data-lightbox="gallery">
+                    <i class="fa fa-2x fa-plus text-white"></i> 
+                </a>
+            </div>
+            <div class="gallery-item">
+                <img class="img-fluid w-100" src="img/gallery-8.jpg" alt="">
+                <a href="img/gallery-8.jpg" data-lightbox="gallery">
+                    <i class="fa fa-2x fa-plus text-white"></i>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <img class="img-fluid w-100" src="img/gallery-9.jpg" alt="">
+                <a href="img/gallery-9.jpg" data-lightbox="gallery">
+                    <i class="fa fa-2x fa-plus text-white"></i>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <img class="img-fluid w-100" src="img/gallery-10.jpg" alt="">
+                <a href="img/gallery-10.jpg" data-lightbox="gallery">
+                    <i class="fa fa-2x fa-plus text-white"></i>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <img class="img-fluid w-100" src="img/gallery-11.jpg" alt="">
+                <a href="img/gallery-11.jpg" data-lightbox="gallery">
+                    <i class="fa fa-2x fa-plus text-white"></i>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <img class="img-fluid w-100" src="img/gallery-12.jpg" alt="">
+                <a href="img/gallery-6.jpg" data-lightbox="gallery">
+                    <i class="fa fa-2x fa-plus text-white"></i>
+                </a>
+            </div>
+        </div>
         <div class="owl-carousel gallery-carousel">
             <div class="gallery-item">
                 <img class="img-fluid w-100" src="img/gallery-1.jpeg" alt="">
                 <a href="img/gallery-1.jpeg" data-lightbox="gallery">
-                    
+                    <i class="fa fa-2x fa-plus text-white"></i>
                 </a>
             </div>
             <div class="gallery-item">
@@ -166,16 +211,27 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center">
-                    <h5 class="font-weight-normal text-muted mb-3 pb-3">Clita ipsum aliquyam dolor diam dolores elitr nonumy. Rebum sea vero ipsum eirmod tempor kasd. Diam amet lorem erat eos sit lorem elitr justo</h5>
+                    <h5 class="font-weight-normal text-muted mb-3 pb-3">Aquí encontrarás la ubicación del evento y las recomendaciones de vestimenta</h5>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 border-right border-primary">
-                    <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
+                    <div class="text-center text-md-center mr-md-3 mb-4 mb-md-0">
                         <img class="img-fluid mb-4" src="img/event-1.jpg" alt="">
                         <h4 class="mb-3">Ubicación</h4>
                         <p class="mb-2">Av NQS #1-79, Puente Aranda, Bogotá</p>
                         <p class="mb-0">Salón Romano - Absolute Eventos</p>
+                        <div>
+                            <button class="btn btn-primary font-weight-bold py-3 px-5" onclick="window.location.href='https://www.google.com/maps/place/SALON+ROMANO+-+ABSOLUT+EVENTOS/@4.5996931,-74.1056592,18z/data=!4m6!3m5!1s0x8e3f993c85c26583:0x8827f535afc7971a!8m2!3d4.5997749!4d-74.1058217!16s%2Fg%2F1ptzw8zgk?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D'">¿Cómo llegar?</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="text-center text-md-center ml-md-3">
+                        <img class="img-fluid mb-4" src="img/event-2.png" alt="" width="75%" height="auto">
+                        <h4 class="mb-3">Vestimenta</h4>
+                        <p class="mb-2">A preferencia</p>
+                        <p class="mb-0">Se reserva el color rosado</p>
                     </div>
                 </div>
             </div>
@@ -200,20 +256,12 @@
                                     <input type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Nombre"/>
                                 </div>
                                 <div class="form-group col-sm-6">
-                                    <input type="email" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Email"/>
+                                    <input type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Número Telefónico"/>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-sm-6">
                                     <input type="number" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Numero de invitados" min="1" max="10"/>
-                                </div>
-                                <div class="form-group col-sm-6">
-                                    <select class="form-control bg-secondary border-0" style="height: 52px;">
-                                        <option>Asistiré a</option>
-                                        <option>Ambos eventos</option>
-                                        <option>Ceremonia</option>
-                                        <option>Fiesta</option>
-                                    </select>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -263,7 +311,7 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="lib/countdown/countdown.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>

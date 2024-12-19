@@ -2371,21 +2371,21 @@ fieldset:disabled a.btn {
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
   background-color: #F9D4DE;
-  border-color: #000000;
-  box-shadow: 0 0 0 0.2rem rgba(232, 142, 77, 0.5);
+  border-color: #fff;
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
 }
 
 .btn-primary.disabled, .btn-primary:disabled {
   color: #fff;
-  background-color: #E47A2E;
-  border-color: #E47A2E;
+  background-color: #d9859b;
+  border-color: #d9859b;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #c5611a;
-  border-color: #ba5c18;
+  background-color: #d9859b;
+  border-color: #d9859b;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
@@ -2664,24 +2664,24 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-primary:focus, .btn-outline-primary.focus {
-  box-shadow: 0 0 0 0.2rem rgba(228, 122, 46, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(242, 148, 173, 0.5);
 }
 
 .btn-outline-primary.disabled, .btn-outline-primary:disabled {
-  color: #E47A2E;
+  color: #F294AD;
   background-color: transparent;
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active,
 .show > .btn-outline-primary.dropdown-toggle {
   color: #fff;
-  background-color: #E47A2E;
-  border-color: #E47A2E;
+  background-color: #F294AD;
+  border-color: #F294AD;
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-outline-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(228, 122, 46, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(242, 148, 173, 0.5);
 }
 
 .btn-outline-secondary {
@@ -9489,6 +9489,8 @@ a.text-dark:hover, a.text-dark:focus {
   bottom: 30px;
   z-index: 11;
   animation: action 1s infinite alternate;
+  border-radius: 50px;
+  
 }
 
 @keyframes action {
@@ -9748,6 +9750,7 @@ a.text-dark:hover, a.text-dark:focus {
   color: #000000;
   background: #FFFFFF;
   font-size: 30px;
+  opacity: 0;
 }
 
 @media (max-width: 767.98px) {
@@ -9760,16 +9763,16 @@ a.text-dark:hover, a.text-dark:focus {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0.5rem 1rem;
 }
 .countdown div{
   
-  flex-basis: 100px;
+  flex-basis: 80px;
 }
 .countdown p{
   
-  font-size: 60px;
+  font-size: 50px;
   margin-bottom: -14px;
 }
 .fade-in {
