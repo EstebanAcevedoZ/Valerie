@@ -9781,7 +9781,6 @@ a.text-dark:hover, a.text-dark:focus {
 }
 html, body {
   overflow-x: hidden;
-  outline: 1px solid red; /* Debug outline */
 }
 
 @keyframes fadeIn {
