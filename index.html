@@ -101,13 +101,14 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center">
-                    <h5 class="font-weight-normal text-muted mb-3 pb-3">Con gran alegría, queremos invitarte a celebrar los 15 años de Valeria Castiblanco. 
-                        Será una ocasión llena de amor, risas y momentos inolvidables, donde Valerie dará un paso importante en su camino de la vida.</h5>
+                    <h5 class="font-weight-normal text-muted mb-3 pb-3">Con gran alegría, quiero invitarte a mi fiesta de 15 años. 
+                        Será una ocasión llena de amor, risas y momentos inolvidables, donde daré un paso importante en el camino de mi vida.</h5>
                 </div>
             </div>
         </div>
     </div>
     <!-- About End -->
+
 
     <!-- Gallery Start -->
     <div class="container-fluid bg-gallery" id="gallery" style="padding: 10px 0; margin: 10px 0;">
@@ -118,7 +119,7 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-md-6 text-center">
-                <h5 class="font-weight-normal text-muted mb-3 pb-3">Desliza la foto para ver más!</h5>
+                <h5 class="font-weight-normal text-muted mb-3 pb-3">¡Desliza la foto para ver más!</h5>
             </div>
         </div>
         <div class="owl-carousel gallery-carousel">
@@ -220,7 +221,7 @@
                         <img class="img-fluid mb-4" src="img/event-1.jpg" alt="">
                         <h4 class="mb-3">Ubicación</h4>
                         <p class="mb-2">Av NQS #1-79, Puente Aranda, Bogotá</p>
-                        <p class="mb-0">Salón Romano - Absolute Eventos</p>
+                        <p class="mb-2">Salón Romano - Absolute Eventos</p>
                         <div>
                             <button class="btn btn-primary font-weight-bold py-3 px-5" onclick="window.location.href='https://www.google.com/maps/place/SALON+ROMANO+-+ABSOLUT+EVENTOS/@4.5996931,-74.1056592,18z/data=!4m6!3m5!1s0x8e3f993c85c26583:0x8827f535afc7971a!8m2!3d4.5997749!4d-74.1058217!16s%2Fg%2F1ptzw8zgk?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D'">¿Cómo llegar?</button>
                         </div>
@@ -253,7 +254,7 @@
                         <form>
                             <div class="form-row">
                                 <div class="form-group col-sm-6">
-                                    <input type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Nombre"/>
+                                    <input type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Tu nombre"/>
                                 </div>
                                 <div class="form-group col-sm-6">
                                     <input type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Número Telefónico"/>
@@ -261,7 +262,14 @@
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-sm-6">
-                                    <input type="number" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Numero de invitados" min="1" max="10"/>
+                                    <input type="number" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Número de acompañantes" min="1" max="10" id="numberOfPeople"/>
+                                    <button type="button" onclick="setNumberOfPeople()" class="btn-sml btn-primary font-weight-bold py-1 px-1 border-left-0">Ok</button>
+                                </div>
+                                <div id="inputContainer" class="form-group col-sm-6" style="display: none;">
+                                    <input type="text" id="personName" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Nombre del acompañante" required>
+                                    <button type="button" onclick="addPerson()" class="btn-sml btn-primary font-weight-bold py-1 px-1 border-left-0">Add</button>
+                                    <ul id="peopleList"></ul>
+                                    <button id="submitButton" type="button" style="display: none;" onclick="submitForm()">Submit</button>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -302,7 +310,6 @@
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-outline-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
-
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
@@ -312,6 +319,7 @@
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
     <script src="lib/countdown/countdown.js"></script>
+    <script src="lib/Form/people.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
