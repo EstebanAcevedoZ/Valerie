@@ -21,6 +21,18 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "GX-5IzXTjXCYgubBA",
+            });
+        })();
+    </script>
+    <script src="lib/form/form.js"></script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
@@ -215,8 +227,8 @@
                     <h5 class="font-weight-normal text-muted mb-3 pb-3">Aquí encontrarás la ubicación del evento y las recomendaciones de vestimenta</h5>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-6 border-right border-primary">
+            <div class="row justify-content-center">
+                <div class="col-md-6 py-5">
                     <div class="text-center text-md-center mr-md-3 mb-4 mb-md-0">
                         <img class="img-fluid mb-4" src="img/event-1.jpg" alt="">
                         <h4 class="mb-3">Ubicación</h4>
@@ -227,12 +239,22 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6 border-right border-primary">
+                    <div class="text-center text-md-center ml-md-3">
+                        <img class="img-fluid mb-4" src="img/event-2.png" alt="" width="50%" height="auto">
+                        <h4 class="mb-3">Traje</h4>
+                        <p class="mb-2">Ellos y ellas elegantes</p>
+                        <p class="mb-0">Se reserva el color rosado</p>
+                    </div>
+                </div>
                 <div class="col-md-6">
                     <div class="text-center text-md-center ml-md-3">
-                        <img class="img-fluid mb-4" src="img/event-2.png" alt="" width="75%" height="auto">
-                        <h4 class="mb-3">Vestimenta</h4>
-                        <p class="mb-2">A preferencia</p>
-                        <p class="mb-0">Se reserva el color rosado</p>
+                        <img class="img-fluid mb-4" src="img/event-1.png" alt="" width="50%" height="auto">
+                        <h4 class="mb-3">Obsequios</h4>
+                        <p class="mb-2">Lluvia de sobres</p>
                     </div>
                 </div>
             </div>
@@ -262,7 +284,7 @@
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-sm-6">
-                                    <input type="number" id="mates" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Número de acompañantes" min="1" max="10" id="numberOfPeople"/>
+                                    <input type="number" id="mates" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Número de acompañantes" min="1" max="4" id="numberOfPeople"/>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -312,7 +334,7 @@
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
     <script src="lib/countdown/countdown.js"></script>
-    <script src="lib/Form/people.js"></script>
+    
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
