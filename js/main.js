@@ -18,7 +18,7 @@
             
             $('html, body').animate({
                 scrollTop: $(this.hash).offset().top - 45
-            }, 1500, 'easeInOutExpo');
+            }, 3500, 'easeInOutExpo');
             
             if ($(this).parents('.navbar-nav').length) {
                 $('.navbar-nav .active').removeClass('active');
@@ -46,9 +46,11 @@
     });
 
 
-    // Scroll to RSVP
-    $('.scroll-to-bottom').click(function () {
-        $('html, body').animate({scrollTop: $("#rsvp")}, 1500, 'easeInOutExpo');
+    // Scroll to section
+    $('.scroll-to-section').click(function () {
+        $('html, body').animate({ 
+            scrollTop: $('#target-section').offset().top 
+        }, 1500, 'easeInOutExpo');
         return false;
     });
 
