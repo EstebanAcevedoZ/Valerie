@@ -46,13 +46,10 @@
     });
 
 
-    // Scroll to Bottom
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            $('.scroll-to-bottom').fadeOut('slow');
-        } else {
-            $('.scroll-to-bottom').fadeIn('slow');
-        }
+    // Scroll to RSVP
+    $('.scroll-to-bottom').click(function () {
+        $('html, body').animate({scrollTop: $("#rsvp")}, 1500, 'easeInOutExpo');
+        return false;
     });
 
 
