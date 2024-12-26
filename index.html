@@ -21,18 +21,6 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init({
-                publicKey: "GX-5IzXTjXCYgubBA",
-            });
-        })();
-    </script>
-    <script src="lib/form/form.js"></script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
@@ -93,7 +81,11 @@
                                     <p id="seconds">00</p>
                                     <span>Seg.</span>
                                 </div>
+                                
                             </div>
+                        </div>
+                        <div class="d-inline-block border-top border-bottom border-light py-3 px-4 fade-in">
+                            <h3 class="text-uppercase font-weight-normal text-white m-0 fade-in" style="letter-spacing: 1px;">Confirma tu asistencia</h3>
                         </div>
                     </div>
                 </div>
@@ -263,7 +255,7 @@
     <!-- Event End -->
 
     <!-- RSVP Start -->
-    <div class="container-fluid py-0" id="rsvp">
+    <div class="container-fluid py-0" id="rsvp" method="POST">
         <div class="container py-5">
             <div class="section-title position-relative text-center">
                 <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Reserva</h6>
@@ -276,19 +268,19 @@
                         <form>
                             <div class="form-row">
                                 <div class="form-group col-sm-6">
-                                    <input type="text" id="name" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Tu nombre"/>
+                                    <input type="text" name="name" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Tu nombre"/>
                                 </div>
                                 <div class="form-group col-sm-6">
-                                    <input type="text" id="phone" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Número Telefónico"/>
+                                    <input type="text" name="phone" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Número Telefónico"/>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-sm-6">
-                                    <input type="number" id="mates" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Número de acompañantes" min="1" max="4" id="numberOfPeople"/>
+                                    <input type="number" name="mates" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Número de acompañantes" min="1" max="4" id="numberOfPeople"/>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <textarea id="message" class="form-control bg-secondary border-0 py-2 px-3" rows="5" placeholder="Escriba el nombre de sus acompañantes aquí..." required="required"></textarea>
+                                <textarea name="message" class="form-control bg-secondary border-0 py-2 px-3" rows="5" placeholder="Escriba el nombre de sus acompañantes aquí..." required="required"></textarea>
                             </div>
                             <div>
                                 <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit">Enviar</button>
@@ -309,23 +301,38 @@
                 <h1 class="font-secondary display-3 text-dark">Te esperamos</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
+            
             <div class="d-flex justify-content-center py-0">
-                <p class="text-dark" href="#">info@example.com</p>
-                <span class="px-3 text-dark">|</span>
-                <p class="text-dark" href="#">+012 345 6789</p>
+                <p class="text-dark" href="#">Contacto</p>
+            </div>
+            <div class="d-flex justify-content-center mb-4">
+                <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://wa.me/573012408560"><i class="fab fa-whatsapp"></i></a>
+                <a class="btn btn-lg btn-outline-light btn-lg-square" href="mailto:15devalerie@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </div>
     <!-- Footer End -->
 
-
-    <!-- Scroll to Bottom -->
-    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
-
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-outline-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
     <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      emailjs.init("Valerie");
+    
+      const info = document.getElementById("rsvp");
+      info.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        try {
+          await emailjs.sendForm("service_mcvvfrr","template_ocnqr1c", ".rsvp");
+          alert("Reservación enviada con éxito");
+        } catch (error) {
+            console.error("Error details:", error); // Log the full error object
+            alert("Error al hacer la reservación. " + error.text);
+        }
+      });
+    </script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
