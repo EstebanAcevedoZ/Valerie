@@ -257,7 +257,7 @@
     <!-- Event End -->
 
     <!-- RSVP Start -->
-    <div class="container-fluid py-0" id="rsvp" method="POST">
+    <div class="container-fluid py-0" id="rsvp">
         <div class="container py-5">
             <div class="section-title position-relative text-center">
                 <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Reserva</h6>
@@ -267,26 +267,30 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="text-center">
-                        <form>
+                        <form method="POST" id="form">
                             <div class="form-row">
+                                <input type="hidden" name="access_key" value="e1458fc5-2d3f-45bc-9ffb-b41ddba822e3">
+                                <input type="hidden" name="subject" value="Nueva reservación">
                                 <div class="form-group col-sm-6">
-                                    <input type="text" name="name" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Tu nombre"/>
+                                    <input type="text" name="Nombre" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Tu nombre"/>
                                 </div>
                                 <div class="form-group col-sm-6">
-                                    <input type="text" name="phone" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Número Telefónico"/>
+                                    <input type="text" name="Teléfono" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Número Telefónico"/>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-sm-6">
-                                    <input type="number" name="mates" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Número de acompañantes" min="1" max="4" id="numberOfPeople"/>
+                                    <input type="number" name="Número de invitados" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Número de acompañantes" min="1" max="4" id="numberOfPeople"/>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <textarea name="message" class="form-control bg-secondary border-0 py-2 px-3" rows="5" placeholder="Escriba el nombre de sus acompañantes aquí..." required="required"></textarea>
+                                <textarea name="Nombre de los invitados" class="form-control bg-secondary border-0 py-2 px-3" rows="5" placeholder="Escriba el nombre de sus acompañantes aquí..." required="required"></textarea>
                             </div>
                             <div>
                                 <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit">Enviar</button>
+                                <div id="result"></div>
                             </div>
+                            <script></script>
                         </form>
                     </div>
                 </div>
@@ -319,22 +323,6 @@
     <a href="#" class="btn btn-lg btn-outline-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
     <!-- JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script>
-      emailjs.init("Valerie");
-    
-      const info = document.getElementById("rsvp");
-      info.addEventListener("submit", async (e) => {
-        e.preventDefault();
-        try {
-          await emailjs.sendForm("service_mcvvfrr","template_ocnqr1c", ".rsvp");
-          alert("Reservación enviada con éxito");
-        } catch (error) {
-            console.error("Error details:", error); // Log the full error object
-            alert("Error al hacer la reservación. " + error.text);
-        }
-      });
-    </script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
@@ -343,7 +331,8 @@
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
     <script src="lib/countdown/countdown.js"></script>
-    
+    <script src="lib/form/form.js"></script>
+    <!--script src="lib/form/clear.js"></script-->
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
